@@ -56,7 +56,9 @@ class RandomSampledDataset():
         return sample_img_ids
     
     def fetch_img(self, image_id):
-        img_path = os.path.join(self.dataset_path, 'img', '{}.jpg'.format(image_id))
+        # example_img_path = os.listdir(os.path.join(self.dataset_path, 'img'))[0]
+        # suffix = example_img_path[-3:]
+        img_path = os.path.join(self.dataset_path, 'img', image_id)
         raw_image = Image.open(img_path).convert('RGB')
         
         if self.ann:

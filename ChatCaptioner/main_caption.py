@@ -16,7 +16,7 @@ def parse():
                         help='root path for saving results')
     parser.add_argument('--exp_tag', type=str, required=True, 
                         help='tag for this experiment. caption results will be saved in save_root/exp_tag')
-    parser.add_argument('--datasets', nargs='+', choices=['artemis', 'cc_val', 'coco_val', 'para_test', 'pascal'], default=['coco_val'],
+    parser.add_argument('--datasets', nargs='+', choices=['artemis', 'cc_val', 'coco_val', 'para_test', 'pascal', 'objaverse'], default=['coco_val'],
                         help='Names of the datasets to use in the experiment. Valid datasets include artemis, cc_val, coco_val. Default is coco_val')
     parser.add_argument('--n_rounds', type=int, default=10, 
                         help='Number of QA rounds between GPT3 and BLIP-2. Default is 10, which costs about 2k tokens in GPT3 API.')
